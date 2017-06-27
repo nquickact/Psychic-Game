@@ -1,0 +1,17 @@
+/* created by Nathan Quick
+*/
+body {
+	background-color: #DCDCDC;
+}
+
+.container{
+	background-color: #F0F8FF;
+}
+#wins {
+
+	color: green;
+}
+#losses {
+
+	color:red;
+}
