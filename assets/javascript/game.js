@@ -16,8 +16,8 @@ document.onkeyup = function(event) {
   var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
 	guessedLetters.push(userGuess);
- 	updateGuessesLeft();
-  	updateGuessesSoFar();
+ 	updateGuessLeft();
+  	updateGuessSoFar();
 
         if (guessesLeft > 0){
         		//we have guesses left
@@ -43,7 +43,7 @@ document.onkeyup = function(event) {
 	//randomizes computer guess from available choices
 var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 	// Here we are returning the guesses left value through the html
-var updateGuessesLeft = function() {
+var updateGuessLeft = function() {
   document.querySelector('#guessLeft').innerHTML = "Guesses left: " + guessesLeft;
 };
 	// Updating with each round
@@ -51,7 +51,7 @@ var updateLetterToGuess = function() {
   this.letterToGuess = this.computerChoices[Math.floor(Math.random() * this.computerChoices.length)];
 };
 	// Here we take the guesses the user has tried and return them as letters separated by commas.
-var updateGuessesSoFar = function() { 
+var updateGuessSoFar = function() { 
   document.querySelector('#let').innerHTML = "Your Guesses so far: " + guessedLetters.join(', ');
 };
 
@@ -62,8 +62,8 @@ var reset = function() {
   guessedLetters = [];
 
   updateLetterToGuess();
-  updateGuessesLeft();
-  updateGuessesSoFar();
+  updateGuessLeft();
+  updateGuessSoFar();
 }
 
 
